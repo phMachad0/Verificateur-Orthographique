@@ -5,7 +5,7 @@ int lecture(FILE* fp, char* mot) {
 	int j,c;
 	j=0;
 	do {
-		c=remove_accent(fgetwc(fp));
+		c=fgetc(fp);
 		if (c==EOF) return 0;
 		if (c=='\n' || c=='\r') break;
 		if (!ispunct(c) && !isspace(c)) inter[j++]=c;
